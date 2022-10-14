@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+  <div class="main-panel">
+    <div id="tweet" class="tweet">
+      <div class="col-md-6 grid-margin mx-auto">
+        {% for message in messages %}
+            {% include 'post.html.twig' %} 
+        {% endfor %}
+      </div>
+    </div>
+    <div id="bas" class="bas">
+      {% if previous >= 0 %}
+          <a href="{{ path('app_index', {offset: previous }) }}">Retour</a>
+      {% endif %}
+
+      {% if nbrPaginator %}
+          <a href="{{ path('app_index', {offset: 1 }) }}">1</a>
+      {% endif %}
+      
+      {% if next < messages|length %}
+          <a href="{{ path('app_index', {offset: next }) }}">Suivant</a>
+      {% endif %}
+    </div>
+    {% include 'trends.html.twig'%}
+  </div>
+
+
+
+{% endblock %}

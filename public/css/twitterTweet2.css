@@ -1,0 +1,150 @@
+body{
+    background: #F5F7FF;
+
+}
+
+.main-panel{
+    background: #F5F7FF;
+}
+
+.tweet{
+    padding-top:1%;
+    align-items: center;
+    /* margin-right: 10%; */
+    background: #F5F7FF; 
+    clear:both;
+    overflow: auto;
+}
+
+.Tendance{
+    background: #F5F7FF;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* .intTweet{
+display:;
+border-bottom: 1px solid #e6ecf0;
+} */
+
+.bas{
+    text-align: center;
+    position:relative;
+}
+
+.pfpTweet{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.headerTweet{
+    display: flex;
+}
+
+.pseudoTweet{
+
+  font-size: 15px;
+  font-weight: 700;
+  color: #14171a;
+}
+
+.dateTweet{
+  font-size: 10px;
+  font-weight: 700;
+  color: #454749;
+}
+
+.contenuTweet{
+  text-align: center;
+}
+
+.bottomIMGTweet{
+  width: 20px;
+  height: 20px;
+}
+
+.tweetPrecis{
+  align-items: center;
+  padding-left: 20%;
+  padding-top: 1%;  
+}
+
+
+.parametreHead{
+  position: absolute;
+  left: 40%;
+  top:10%;
+}
+
+.parametreContent{
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  min-height: 10%;
+}
+
+#cardParametre1{
+  margin-left: 120%;
+  margin-top: 8%;
+}
+
+#cardParametre2{
+  min-width: 600px;
+  margin: auto;
+}
+
+#cardParametre3{
+  margin: auto;
+}
+
+.contentPWD{
+  font-family: FontAwesome;
+  src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.trends-for-you {
+    position: fixed;
+    top: 7.5%;
+    right: 1.125%;
+    width: 20%;
+    border-radius: 15px;
+    background: #ffffff;
+    margin-bottom: 15px;
+    height: fit-content;
+  }
+  
+  .trends-for-you__block {
+    border-bottom: 1px solid #e6ecf0;
+    padding: 10px 15px;
+  }
+  
+  .trends-for-you__block:last-child {
+    border-bottom: none;
+  }
+  
+  .trends-for-you__heading {
+    font-size: 19px;
+    font-weight: bold;
+    color: #14171a;
+  }
+  
+  .trends-for-you__meta-information {
+    font-size: 13px;
+    font-weight: 300;
+    color: #657786;
+  }
+  
+  .trends-for-you__trend-name {
+    font-size: 15px;
+    color: #14171a;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 2px;
+  }
+  
+  

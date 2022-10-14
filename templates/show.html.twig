@@ -1,0 +1,14 @@
+{% block stylesheets %}
+<link rel="stylesheet" href="css/twitterTweet.css">
+{% endblock %}
+
+{% block body %}
+    <div class="Tweet">
+        {{message.id}} {{message.dateCreaMessage|date("m/d/Y") }}
+        {{message.texteMessage}}
+        {{message.likeMessage}} {{message.rtMessage}}
+        <p>
+            <a href="{{ path('message', { id: message.id }) }}">View</a>
+        </p>
+    <div>
+{% endblock %}

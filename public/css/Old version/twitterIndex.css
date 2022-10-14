@@ -1,0 +1,173 @@
+/* body {
+  font-family: "Lato", sans-serif;
+}
+
+.layout{
+  display: grid;
+  grid-template-columns: 200px 1fr 100px;
+  grid-column-gap: 200px;
+  z-index: 999;
+}
+
+.sideBar {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #E4E3E3;
+  padding-top: 20px;
+  background-color: white;
+}
+
+.sideBar a {
+  text-decoration: none;
+  padding: 106px 8px 6px 16px;
+  font-size: 35px;
+  color: #3B3B3B;
+  display: block;
+  z-index: 2;
+}
+
+.sideBar a:hover {
+  color: #1298F0;
+  z-index: 2;
+}
+
+.decaler{
+  grid-row-start: 1;
+  grid-column-start: 1;
+  visibility: hidden;
+  color: rgb(17, 17, 17);
+}
+
+.avatar {
+  z-index: 2;
+  width: 90px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 100px;
+  left:40px;
+}
+
+
+.loupe {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 40px;
+  right: 120px;
+}
+
+.Name{
+  font-size: 20px;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 5;
+  left: 50px;
+  bottom:0px;
+  color: #3B3B3B;
+}
+
+.WGO{
+  top: 40px;
+  text-indent: 400px;
+  font-size: 40px;
+  left: 300px;
+  color: #3B3B3B;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  outline: none;
+  border:none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background:#dfe9f5;
+}
+nav{
+  position:absolute;
+  top:0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background:#fff ;
+  width:124px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+
+.logo{
+  text-align: center;
+  transition: all 0.5s ease;
+  margin: 0px 0 0 -8px;
+}
+
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius:50%;
+}
+
+.logo span{
+  font-weight: bold;
+  top:10px;
+  padding-left: 40px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 18px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+
+.fas{
+  position: relative;
+  width: 70px;
+  height: 80px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 15px;
+  margin-left: 13px;
+}
+a:hover{
+  background: #eee;
+}
+nav:hover{
+  width: 280px;
+  transition: all 0.5s ease;
+}
+
+.Pseudo{
+  position: absolute;
+  bottom: 50px;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: 650px 900px 1fr;
+}
+
+/* ------------------------------------------------------ */

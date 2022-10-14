@@ -1,0 +1,23 @@
+{% block stylesheets %}
+<link rel="stylesheet" href="css/twitterTweet2.css">
+{% endblock %}
+
+{% block body %}
+
+<div class="main-panel">
+    <div class="card border rounded mb-2">
+        <div class="card-body">
+            <p class="card-title"> {{message.util.pseudoUtil}} - {{message.dateCreaMessage|date("m/d/Y") }} </p>
+            <p class="contenuTweet">{{message.texteMessage}}</p>
+            {% if message.image == null%}
+
+            {% else %}
+            <img src="..." class="card-img-bottom" alt="...">
+            {% endif %}
+            <p class="card-text"><img src={{ asset('image/Bulle.png') }} class="w3-image" width="6%" height="6%">{{message.likeMessage}}<img src={{ asset('image/Like.png') }} class="w3-image" width="6%" height="6%"> {{message.rtMessage}}<img src={{ asset('image/RT.png') }} class="w3-image" width="6%" height="6%"></p>
+            <a href="{{ path('thisPoste', { id: message.id }) }}">Voir le tweet</a>
+            </p>
+        </div>
+    </div>  
+</div>
+{% endblock %}

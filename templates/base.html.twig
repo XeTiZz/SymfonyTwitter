@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" >
+        <link rel="icon" href="data:image/png;base64,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">
+        
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- plugins:css -->
+        <link rel="stylesheet" href="{{ asset('css/feather.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/vendor.bundle.base.css') }}">
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('js/select.dataTables.min.css') }}">
+        <!-- End plugin css for this page -->
+        <!-- inject:css -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/twitterTweet2.css') }}">
+        <!-- endinject -->
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
-
+        
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+
+    <div class="container-scroller">
+    <!-- MENU -->
+    {% if app.user %}
+    {% include 'menu.html.twig' %}
+    {% endif  %}
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- RIGHT SIDEBAR | Faire un if si pas connecter, renvoie sur login et ne charge pas les SIDEBAR-->
+        {% if app.user %}
+        {% include 'right_sidebar.html.twig'%}
+        {% endif  %}
+        <!-- partial -->
+        <!-- LEFT SIDEBAR -->
+        {% if app.user %}
+        {% include 'left_sidebar.html.twig' %}
+        {% endif  %}
+
+        {% block body %} 
+        
+        {% endblock %}
+        </div>   
+    <!-- page-body-wrapper ends -->
+    </div>
+
+
+    <!-- plugins:js -->
+    <script src="{{ asset('js/vendor.bundle.base.js') }}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="{{ asset('js/Chart.min.js') }}"></script>
+    <script src="{{ asset('js/datatables.net/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('js/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('js/dataTables.select.min.js') }}"></script>
+
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{{ asset('js/off-canvas.js') }}"></script>
+    <script src="{{ asset('js/hoverable-collapse.js') }}"></script>
+    <script src="{{ asset('js/template.js') }}"></script>
+    <script src="{{ asset('js/settings.js') }}"></script>
+    <script src="{{ asset('js/todolist.js') }}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="{{ asset('js/dashboard.js') }}"></script>
+    <script src="{{ asset('js/Chart.roundedBarCharts.js') }}"></script>
+    <!-- End custom js for this page-->
     </body>
 </html>
+
+

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Message {{message.id}}{% endblock %}
+
+{% block body %}
+    <div class="tweetPrecis">
+        <div class="main-panel">
+            {% include 'post.html.twig'%}
+        </div>  
+    </div>
+
+{% endblock %}
