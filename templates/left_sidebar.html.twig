@@ -6,24 +6,32 @@
             <span class="menu-title">Accueil</span>
         </a>
         </li>
-        <li class="nav-item">
+        {# <li class="nav-item">
         <a class="nav-link" href="#auth">
             <i class="icon-head menu-icon"></i>
             <span class="menu-title">Profil</span>
         </a>
-        </li>
+        </li> #}
         <li class="nav-item">
-        <a class="nav-link" href="#auth">
-            <i class="ti-email menu-icon"></i>
+        <a class="nav-link open-button" href="{{ path('app_envoie_tweet') }}">
+            <i class="ti-comment menu-icon"></i>
             <span class="menu-title">Tweet</span>
         </a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#auth">
-            <i class="ti-email menu-icon"></i>
-            <span class="menu-title">Message</span>
+        <li class="nav-item nav-settings d-none d-lg-flex">
+        <a class="nav-link" href="#">
+            <i class="icon-head menu-icon"></i>
+            <span class="menu-title">Message privé</span>
         </a>
         </li>
+        {% if is_granted('ROLE_ADMIN') %}
+        <li class="nav-item">
+        <a class="nav-link" href="{{ path('admin') }}">
+            <i class="ti-user menu-icon"></i>
+            <span class="menu-title">Admin</span>
+        </a>
+        </li>
+        {% endif %}
         <li class="nav-item">
         <a class="nav-link" href="{{ path('app_parametre') }}">
             <i class="ti-settings menu-icon"></i>

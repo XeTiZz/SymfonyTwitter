@@ -49,6 +49,7 @@ class RegistrationFormType extends AbstractType
                 'required' => true,
             ])
             ->add('ageUtil', CheckboxType::class,[
+                'attr' => ['class' => 'FieldWidth'],
                 'constraints' => [
                     new IsTrue([
                         'message' => 'You should agree to our terms.',
@@ -56,6 +57,7 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('agreeTerms', CheckboxType::class, [
+                'attr' => ['class' => 'FieldWidth'],
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([

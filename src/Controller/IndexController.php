@@ -42,6 +42,20 @@ class IndexController extends AbstractController
             'message' => $messagePublic,
         ]));
     }
+
+    // #[Route('/poste/{id}', name: 'thisPoste')]
+    // public function show(Environment $twig, MessagePublic $messagePublic): Response
+    // {
+    //     return new Response($twig->render('poste/thisPoste.html.twig', [
+    //         'message' => $messagePublic,
+    //     ]));
+    // }
+
+    // #[Route('/blog', name: 'blog_list')]
+    // public function list(): Response
+    // {
+    //     // ...
+    // }
 }
 
 class ConnexionController extends AbstractController

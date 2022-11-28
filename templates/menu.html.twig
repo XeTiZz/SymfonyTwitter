@@ -1,3 +1,4 @@
+{% if app.user %}
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
     <a class="navbar-brand brand-logo mr-5" href="{{ path('app_index') }}"><img src="{{ asset('image/logo.png') }}" class="mr-2" alt="logo"/></a>
@@ -57,17 +58,18 @@
         </li>
         <li class="nav-item nav-profile dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-            <img src="image/pfp.png" alt="profile"/>
+            <img src="{{asset(app.user.pfpUser)}}" alt="profile"/>
         </a>
         </li>
-        <li class="nav-item nav-settings d-none d-lg-flex">
+        {# <li class="nav-item nav-settings d-none d-lg-flex">
         <a class="nav-link" href="#">
             <i class="icon-ellipsis"></i>
         </a>
-        </li>
+        </li> #}
     </ul>
     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
         <span class="icon-menu"></span>
     </button>
     </div>
 </nav>
+{% endif  %}

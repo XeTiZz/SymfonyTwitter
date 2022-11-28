@@ -4,64 +4,33 @@
 
 {% block body %}
 
-{# <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-    <div class="container h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div id="cardParametre1" class="col-md-9 col-lg-7 col-xl-6">
-          <div id="cardParametre2"class="card">
-            <div id="cardParametre3" class="card-body p-5">
-              <h2 class="text-uppercase text-center mb-5">Nouveau mot de passe</h2>
-
-               {{ form_start(ChangerMDP) }}
-
-                <div class="form-outline mb-4">
-                  {{ form_row(ChangerMDP.plainPassword.first, {
-                    label: 'Nouveau mot de passe',
-                    'attr':{'placeholder':'Nouveau mot de passe'}
-                }) }}
-                </div>
-                <div class="form-outline mb-4">
-                {{ form_row(ChangerMDP.plainPassword.second, {
-                    label: 'Retapez le mot de passe',
-                    'attr':{'placeholder':'Retapez le mot de passe'}
-                }) }}
-                </div>    
-                <button type="submit" class="btn btn-lg btn-primary btn-block">Finaliser</button>
-            </div>
-          </div>
-            {{ form_end(ChangerMDP) }}
-         </div>
-        </div>
-     </div>
-    <div>
-</div> #}
-
 <div class="container mt-5">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6">
-            <div class="card px-5 py-5" id="form1">
-            {{ form_start(ChangerMDP) }}
-                <h2 class="text-uppercase text-center mb-5">Nouveau mot de passe</h2>
-
-                <div class="form-outline mb-4">
-                  {{ form_row(ChangerMDP.plainPassword.first, {
-                    label: 'Nouveau mot de passe',
-                    'attr':{'placeholder':'Nouveau mot de passe'}
-                }) }}
-                </div>
-                <div class="form-outline mb-4">
-                {{ form_row(ChangerMDP.plainPassword.second, {
-                    label: 'Retapez le mot de passe',
-                    'attr':{'placeholder':'Retapez le mot de passe'}
-                }) }}
-                <br>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block">Finaliser</button> </div>
-                </div>
-            {{ form_end(ChangerMDP) }}
-            </div>
+  <div class="d-flex justify-content-center">
+    <div class="card p-5">
+      {{ form_start(ChangerMDP) }}
+      <div class="card text-center">
+        <h2 class="text-uppercase">Nouveau mot de passe</h2>
+      </div>
+      <div class="card-body">
+        <div class="form-outline mb-4">
+          {{ form_row(ChangerMDP.plainPassword.first, {
+              label: 'Nouveau mot de passe', 
+              'attr':{'placeholder':'Nouveau mot de passe','class': 'form-control'}
+          }) }}
         </div>
-    </div>
-</div>
 
+        <div class="form-outline mb-4">
+          {{ form_row(ChangerMDP.plainPassword.second, {
+              label: 'Retapez le mot de passe',
+              'attr':{'placeholder':'Retapez le mot de passe','class': 'form-control'}
+          }) }}
+        </div>
+
+          <button type="submit" class="btn btn-lg btn-primary btn-block">Finaliser</button>
+      {{ form_end(ChangerMDP) }}
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

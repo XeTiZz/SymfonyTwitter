@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Envoyer un message{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <div class="card p-5">
+      {{ form_start(envoieTweet) }}
+      <div class="card text-center">
+        <h2 class="text-uppercase">Envoi d'un tweet</h2>
+      </div>
+      <div class="card-body">
+            <div class="form-outline ">
+                {{ form_row(envoieTweet.texteMessage, {
+                    label: 'Le contenu du tweet', 
+                    'attr':{'placeholder':'Le contenu du tweet...','class': 'form-control'}
+                }) }}
+                {{ form_errors(envoieTweet.texteMessage) }}
+            </div>
+
+            <div class="form-outline mb-4">
+                {{ form_row(envoieTweet.image, {
+                    label: 'Le lien d\'une image...',
+                    'attr':{'placeholder':'Le lien d\'une image...','class': 'form-control'}
+                }) }}
+            </div>
+
+          <button type="submit" class="btn btn-lg btn-primary btn-block">Envoyer</button>
+      </div>
+      {{ form_end(envoieTweet) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
