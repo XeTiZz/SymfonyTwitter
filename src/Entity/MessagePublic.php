@@ -11,7 +11,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: MessagePublicRepository::class)]
 #[ApiResource(
-        collectionOperations: ['get' => ['normalization_context' => ['groups' => 'MessagePublic:list']], 'post' => ['normalization_context' => ['groups' => 'catalogue:list']]],
+        collectionOperations: ['get' => ['normalization_context' => ['groups' => 'MessagePublic:list']], 'post' => ['normalization_context' => ['groups' => 'MessagePublic:list']]],
         itemOperations: ['get' => ['normalization_context' => ['groups' => 'MessagePublic:item']]],
         order: ['texteMessage' => 'DESC', 'id' => 'ASC'],
         paginationEnabled: false,

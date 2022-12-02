@@ -10,47 +10,66 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+#[ApiResource(
+    collectionOperations: ['get' => ['normalization_context' => ['groups' => 'User:list']], 'post' => ['normalization_context' => ['groups' => 'User:list']]],
+    itemOperations: ['get' => ['normalization_context' => ['groups' => 'User:item']]],
+    order: ['nomUtil' => 'DESC', 'id' => 'ASC'],
+    paginationEnabled: false,
+)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['User:list', 'User:item'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
+    #[Groups(['User:list', 'User:item'])]
     private ?string $email = null;
 
     #[ORM\Column]
+    #[Groups(['User:list', 'User:item'])]
     private array $roles = [];
 
     /**
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[Groups(['User:list', 'User:item'])]
     private ?string $password = null;
 
     #[ORM\Column(length: 40)]
+    #[Groups(['User:list', 'User:item'])]
     private ?string $nomUtil = null;
 
     #[ORM\Column(length: 40)]
+    #[Groups(['User:list', 'User:item'])]
     private ?string $prenomUtil = null;
 
     #[ORM\Column(length: 20)]
+    #[Groups(['User:list', 'User:item'])]
     private ?string $pseudoUtil = null;
 
     #[ORM\Column]
+    #[Groups(['User:list', 'User:item'])]
     private ?bool $ageUtil = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[Groups(['User:list', 'User:item'])]
     private ?\DateTimeInterface $dateCreaUtil = null;
 
     #[ORM\Column]
+    #[Groups(['User:list', 'User:item'])]
     private ?bool $actifUtil = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['User:list', 'User:item'])]
     private ?string $pfpUser = null;
 
     #[ORM\OneToMany(mappedBy: 'util', targetEntity: messagePublic::class, orphanRemoval: true)]
