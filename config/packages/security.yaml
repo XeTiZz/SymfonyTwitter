@@ -48,21 +48,21 @@ security:
 
     firewalls:
         dev:
-            pattern: ^/_(profiler|wdt)
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         api:
             pattern: ^/api/
-            stateless: true
+            stateless : true
             provider: app_user_provider
             jwt: ~
-            
         main:
             lazy: true
             provider: app_user_provider
             custom_authenticator: App\Security\LoginAuthenticator
-            logout:
-                path: app_logout
+            logout :
+                path : app_logout
 
+            
             json_login:
                 check_path: /authentication_token
                 username_path: email
