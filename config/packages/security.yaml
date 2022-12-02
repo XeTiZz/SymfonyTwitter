@@ -50,16 +50,25 @@ security:
         dev:
             pattern: ^/_(profiler|wdt)
             security: false
-        main:
+        api:
+            pattern: ^/api/
             stateless: true
             provider: app_user_provider
+            jwt: ~
+            
+        main:
+            lazy: true
+            provider: app_user_provider
+            custom_authenticator: App\Security\LoginAuthenticator
+            logout:
+                path: app_logout
+
             json_login:
                 check_path: /authentication_token
                 username_path: email
                 password_path: password
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
-            jwt: ~
 
     access_control:
         - { path: ^/api/docs, roles: PUBLIC_ACCESS }
@@ -70,9 +79,9 @@ security:
         - { path: ^/poste/*, roles: ROLE_USER }
         - { path: ^/parametre, roles: ROLE_USER }
         - { path: ^/logout, roles: ROLE_USER }
-        - { path: ^/$, roles: ROLE_USER }
-        # - { path: ^/authentication_token, roles: PUBLIC_ACCESS }
-        # - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+        # - { path: ^/$, roles: ROLE_USER }
+        - { path: ^/authentication_token, roles: PUBLIC_ACCESS }
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
 
 when@test:
     security:

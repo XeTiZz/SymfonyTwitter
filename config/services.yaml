@@ -25,31 +25,3 @@ services:
     App\OpenApi\JwtDecorator:
         decorates: 'api_platform.openapi.factory'
         arguments: ['@.inner']
-
-# {
-#   "texteMessage": "TEST API contenu message",
-#   "likeMessage": 12,
-#   "rtMessage": 55,
-#   "image": "",
-#   "dateCreaMessage": "2022-12-02T09:38:10.034Z",
-#   "util": {
-#     "email": "JackPierre1@gmail.com",
-#     "roles": [
-#       ""
-#     ],
-#     "password": "JackPierre1#",
-#     "nomUtil": "Jack",
-#     "prenomUtil": "Pierre",
-#     "pseudoUtil": "Jack Pierre",
-#     "ageUtil": true,
-#     "dateCreaUtil": "2022-10-15T23:16:00Z",
-#     "actifUtil": true,
-#     "pfpUser": "image/bg-01.jpg",
-#     "Poste": [
-#       "string"
-#     ],
-#     "poste": [
-#       "string"
-#     ]
-#   }
-# }
