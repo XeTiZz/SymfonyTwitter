@@ -10,34 +10,24 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 
 #[ORM\Entity(repositoryClass: MessagePublicRepository::class)]
-#[ApiResource(
-        collectionOperations: ['get' => ['normalization_context' => ['groups' => 'MessagePublic:list']], 'post' => ['normalization_context' => ['groups' => 'MessagePublic:list']]],
-        itemOperations: ['get' => ['normalization_context' => ['groups' => 'MessagePublic:item']]],
-        order: ['texteMessage' => 'DESC', 'id' => 'ASC'],
-        paginationEnabled: false,
-    )]
+#[ApiResource()]
 class MessagePublic
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['MessagePublic:list', 'MessagePublic:item'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(['MessagePublic:list', 'MessagePublic:item'])]
     private ?string $texteMessage = null;
 
     #[ORM\Column]
-    #[Groups(['MessagePublic:list', 'MessagePublic:item'])]
     private ?int $likeMessage = null;
 
     #[ORM\Column]
-    #[Groups(['MessagePublic:list', 'MessagePublic:item'])]
     private ?int $rtMessage = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(['MessagePublic:list', 'MessagePublic:item'])]
     private ?string $image = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
