@@ -20,9 +20,8 @@ final class Version20221013123718 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE message_public ADD util_id INT NOT NULL');
-        $this->addSql('ALTER TABLE message_public ADD CONSTRAINT FK_C93B312CF5D2E80 FOREIGN KEY (util_id) REFERENCES user (id)');
-        $this->addSql('CREATE INDEX IDX_C93B312CF5D2E80 ON message_public (util_id)');
+        // $this->addSql('ALTER TABLE message_public ADD util_id INT NOT NULL');
+        // $this->addSql('CREATE INDEX IDX_C93B312CF5D2E80 ON message_public (util_id)');
     }
 
     public function down(Schema $schema): void

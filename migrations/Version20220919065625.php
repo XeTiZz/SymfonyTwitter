@@ -20,12 +20,12 @@ final class Version20220919065625 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE user ADD email_util VARCHAR(70) NOT NULL, ADD pass_util VARCHAR(40) NOT NULL');
+        // $this->addSql('ALTER TABLE user ADD email_util VARCHAR(70) NOT NULL, ADD pass_util VARCHAR(40) NOT NULL');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE user DROP email_util, DROP pass_util');
+        // $this->addSql('ALTER TABLE user DROP email_util, DROP pass_util');
     }
 }
