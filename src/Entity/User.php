@@ -56,7 +56,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $pfpUser = null;
 
-    #[ORM\OneToMany(mappedBy: 'util', targetEntity: messagePublic::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'util', targetEntity: MessagePublic::class, orphanRemoval: true)]
     private Collection $Poste;
 
     public function __construct()

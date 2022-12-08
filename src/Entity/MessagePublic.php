@@ -11,10 +11,12 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: MessagePublicRepository::class)]
 #[ApiResource(
-    operations: [
-        new Get(),
-        new GetCollection()
-    ]
+    // operations: [
+    //     new Get(),
+    //     new Post(),
+
+    //     new GetCollection()
+    // ]
 )]
 class MessagePublic
 {

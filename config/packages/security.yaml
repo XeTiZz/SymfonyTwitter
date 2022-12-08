@@ -79,7 +79,7 @@ security:
         - { path: ^/poste/*, roles: ROLE_USER }
         - { path: ^/parametre, roles: ROLE_USER }
         - { path: ^/logout, roles: ROLE_USER }
-        # - { path: ^/$, roles: ROLE_USER }
+        - { path: ^/$, roles: ROLE_USER }
         - { path: ^/authentication_token, roles: PUBLIC_ACCESS }
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
 
