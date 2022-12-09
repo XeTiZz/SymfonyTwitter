@@ -34,7 +34,7 @@ class ProfileControllerTest extends WebTestCase
         ]);
         $this->assertResponseRedirects();
         $client->followRedirect();
-        $this->assertSelectorExists('div:contains("ZHDBQHDBQZ")');
+        $this->assertSelectorExists('div:contains("vous")');
     }
 }
 
