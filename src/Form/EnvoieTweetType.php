@@ -14,6 +14,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 
 
@@ -35,7 +36,7 @@ class EnvoieTweetType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('image', TextType::class, [
+            ->add('image', FileType::class, [
                 'required' => false,
             ])
         ;
