@@ -40,7 +40,7 @@
                         <p class="contenuTweet">{{message.texteMessage}}</p>
                         {% if message.image %}
                         <br>
-                        <img src="{{asset(message.image)}}" type="video/mp4" class="card-img-bottom imageTweet">
+                        <img src="{{asset('image/' ~ message.image)}}" class="card-img-bottom imageTweet">
                         <br>
                         {% endif %} 
                     </div>

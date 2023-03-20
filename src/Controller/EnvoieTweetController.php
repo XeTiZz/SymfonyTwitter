@@ -27,6 +27,20 @@ class EnvoieTweetController extends AbstractController
             $message->setLikeMessage(0);
             $message->setRtMessage(0);
             $message->setUtil($userid);
+
+            if($form->get('image')->getData()){
+                $image = $form->get('image')->getData();
+            
+                $fichier = md5(uniqid()).'.'.$image->guessExtension();
+            
+                $image->move(
+                    $this->getParameter('image_directory_path'),
+                    $fichier
+                );
+            
+                $message->setImage($fichier);
+            }
+
             $entityManager->persist($message);
             $entityManager->persist($userid);
             $entityManager->flush();
