@@ -20,11 +20,15 @@
                 {{ form_errors(envoieTweet.texteMessage) }}
             </div>
 
-            <div class="form-outline mb-4">
+            {# <div class="form-outline mb-4">
                 {{ form_row(envoieTweet.image, {
                     label: 'Une image',
-                    'attr':{'placeholder':'Une image','class': 'form-control'}
+                    'attr': {'placeholder': 'Une image', 'class': 'form-control'}
                 }) }}
+            </div> #}
+            <div class="mb-3">
+                {{ form_label(envoieTweet.image, 'Une image', {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(envoieTweet.image, {'attr': {'class': 'form-control', 'id': 'formFile'}}) }}
             </div>
 
           <button type="submit" class="btn btn-lg btn-primary btn-block">Envoyer</button>

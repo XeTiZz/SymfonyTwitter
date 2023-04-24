@@ -37,6 +37,7 @@ class EnvoieTweetType extends AbstractType
                 ],
             ])
             ->add('image', FileType::class, [
+                'label' => 'Une image',
                 'required' => false,
             ])
         ;
