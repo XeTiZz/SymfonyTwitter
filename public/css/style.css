@@ -9576,6 +9576,10 @@ pre code {
   .order-sm-6 {
     order: 6;
   }
+  /* ICI */
+  #disableMP{
+    text-decoration:line-through;
+  }
   .order-sm-7 {
     order: 7;
   }
