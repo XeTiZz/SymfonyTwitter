@@ -45,6 +45,6 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToCrud('Message Public', 'fas fa-mobile-alt', MessagePublic::class); 
         yield MenuItem::linkToCrud('Utilisateur', 'far fa-address-card', User::class); 
-        yield MenuItem::linktoRoute('Retour sur le site', 'fas fa-home', '/');
+        yield MenuItem::linktoRoute('Retour sur le site', 'fas fa-home', 'app_index');
     }
 }

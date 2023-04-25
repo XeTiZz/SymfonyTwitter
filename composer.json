@@ -12,7 +12,7 @@
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.13",
-        "easycorp/easyadmin-bundle": "^4",
+        "easycorp/easyadmin-bundle": "^4.6",
         "knplabs/knp-paginator-bundle": "^6.1",
         "lexik/jwt-authentication-bundle": "^2.16",
         "nelmio/cors-bundle": "^2.2",

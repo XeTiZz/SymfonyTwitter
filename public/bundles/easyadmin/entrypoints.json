@@ -2,16 +2,16 @@
   "entrypoints": {
     "app": {
       "css": [
-        "/app.2167d418.css",
-        "/app.2167d418.rtl.css"
+        "/app.8b66671c.css",
+        "/app.8b66671c.rtl.css"
       ],
       "js": [
-        "/app.1bae3230.js"
+        "/app.3f8ee14e.js"
       ]
     },
     "form": {
       "js": [
-        "/form.5aa1447f.js"
+        "/form.56df1b83.js"
       ]
     },
     "page-layout": {
@@ -45,7 +45,7 @@
     },
     "field-file-upload": {
       "js": [
-        "/field-file-upload.71a03f67.js"
+        "/field-file-upload.5b3f6231.js"
       ]
     },
     "field-image": {
@@ -55,7 +55,7 @@
     },
     "field-slug": {
       "js": [
-        "/field-slug.1c789293.js"
+        "/field-slug.7eed3cdc.js"
       ]
     },
     "field-textarea": {
