@@ -42,17 +42,11 @@ final class Version20221021135548 extends AbstractMigration
         (113, 'Je ne sais pas quoi écrire. ', 2, 35, NULL, '2022-10-15 21:38:49', 20),
         (114, 'J\'ai aucune idée de tweet', 23, 59, NULL, '2022-10-17 07:45:13', 21),
         (116, 'Peut-il marcher ?', 0, 0, NULL, '2022-10-17 11:56:20', 20),
-        (117, 'Test', 0, 0, 'image/Cat03.jpg', '2022-10-17 15:26:35', 20),
-        (118, 'Test N°4284293877492', 0, 0, 'image/loginImage.jpg', '2022-10-17 15:47:43', 20),
-        (119, 'Oui.', 0, 0, 'image/photofunky.gif', '2022-10-17 16:04:18', 20),
         (120, 'Bonsooooooooooooooir', 3, 3, NULL, '2022-10-17 14:06:56', 18),
         (121, 'Test vidéo', 0, 0, NULL, '2022-10-17 16:10:46', 20),
-        (122, 'Voilà Andréas', 0, 0, 'image/loginImage.jpg', '2022-10-17 16:49:15', 20),
         (124, 'Suspendisse interdum, odio eget porta euismod, nunc sem vestibulum libero, ut laoreet metus diam non turpis. Interdum et malesuada fames ac', 0, 0, NULL, '2022-10-20 14:28:02', 20),
         (125, 'Ceci est un est pour la pagination N°1.', 0, 0, NULL, '2022-10-20 16:43:05', 20),
         (126, 'Ceci est un est pour la pagination N°2.', 0, 0, NULL, '2022-10-20 16:43:12', 20),
-        (130, 'J\'adore les montagnes !!!', 15, 29, 'image/montagne01.jpg', '2022-10-21 12:17:49', 19),
-        (131, 'Je ne sais pas quoi écrire alors du coup je mets une image de montagne !', 54, 86, 'image/montagne02.jpg', '2022-10-21 12:20:36', 21),
         (132, 'Bonjouuuuuuuuur', 0, 0, NULL, '2022-11-06 11:28:15', 20);");
     }
 
