@@ -53,7 +53,9 @@ final class Version20221021135548 extends AbstractMigration
         (129, 'Ceci est un est pour la pagination N°1.', 0, 0, NULL, '2022-10-20 16:43:12', 20),
         (130, 'Ceci est un est pour la pagination N°1.', 0, 0, NULL, '2022-10-20 16:43:12', 20),
         (131, 'Ceci est un est pour la pagination N°1.', 0, 0, NULL, '2022-10-20 16:43:12', 20),
-        (132, 'Bonjouuuuuuuuur', 0, 0, NULL, '2022-11-06 11:28:15', 20);");
+        (133, 'Voici une image de mon chat !', 0, 0, 'b6808eb14578734c67fc609654262ae9.jpg', '2023-05-10 16:43:12', 20),
+        (134, 'De belles montagnes !', 0, 0, '0d2c3f6981e1dbdb2e2fbc91c88a981f.jpg', '2023-05-10 16:43:12', 23),
+        (132, 'Bonjour à tous !', 0, 0, NULL, '2022-11-06 11:28:15', 20);");
     }
 
     public function down(Schema $schema): void
