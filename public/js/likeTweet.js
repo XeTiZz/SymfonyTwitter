@@ -1,4 +1,4 @@
-// Sélectionner tous les liens "like"
+// LIKE
 const likeLinks = document.querySelectorAll('.like-link');
 
 likeLinks.forEach(link => {
@@ -14,7 +14,7 @@ likeLinks.forEach(link => {
   });
 });
 
-// Sélectionner tous les liens "unlike"
+// UNLIKE
 const unlikeLinks = document.querySelectorAll('.unlike-link');
 
 unlikeLinks.forEach(link => {
