@@ -1,10 +1,19 @@
 body{
-    background: #F5F7FF;
-
+  background: #F5F7FF;
+  margin: 0;
+  padding: 0;
 }
 
 .main-panel{
-    background: #F5F7FF;
+  background: #F5F7FF;
+  width: 100%;
+}
+
+.main-panelPost{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
 }
 
 .bas{
@@ -12,105 +21,87 @@ body{
   position:relative;
 }
 
-.tweet{
-    padding-top:1%;
-    align-items: center;
-    /* margin-right: 10%; */
-    background: #F5F7FF; 
-    clear:both;
-    overflow: auto;
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* DÉBUT TWEET */
+.noneUnderline {
+  text-decoration: none !important;
+  color: #6C7383;
+  width: 30%;
 }
 
-.Tendance{
-    background: #F5F7FF;
+.noneUnderline:hover {
+  text-decoration: none !important;
+  color: #6C7383;
 }
 
-/* --------------------------------------------------------------------- */
-
-.logoLogin{
+.rounded{
   display: block;
-  margin-left: auto;
-  margin-right: auto
+  margin-top:2%;
 }
 
-.noneUnderline:hover{
+.container {
+  margin-top: 5px;
+}
+
+.gridTweet{
+  display: grid;
+  grid-template-columns:  15% 85%;
+  gap: 5px;
   text-decoration: none;
-  color:inherit;
 }
 
-.noneUnderline{
-  color:inherit;
+.pseudoTweet{
+  padding-left: 10 px ;
 }
 
-.tweetGrid{
- display: grid;
- grid-template-columns: 15% 85%;
- gap:10px;
+.basTweet{
+  display: grid;
+  grid-template-columns:  20% 40% 30%;
 }
 
 .pfpTweet{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.headerTweet{
-    display: flex;
-}
-
-
-.pseudoTweet{
-
-  font-size: 15px;
-  font-weight: 700;
-  color: #14171a;
-}
-
-.dateTweet{
-  font-size: 10px;
-  font-weight: 700;
-  color: #454749;
+  border-radius: 50%;
+  width:50px;
+  height:50px;
 }
 
 .contenuTweet{
-  text-align: center;
+  padding: 10px;
 }
 
-.imageTweet{
-  max-width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%; 
+.contenuTweet img{
+  width:100%;
+  max-width:350px;
 }
 
-.bottomLine{
-border-top: 1px solid gray ;
+.card{
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
-.bottomTweet{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.filled {
+  fill: #6C7383;
 }
 
-.bottomIMGTweet{
-  width: 20px;
-  height: 20px;
+.unfilled {
+  stroke: #888888;
 }
 
-.tweetPrecis{
-  align-items: center;
-  padding-left: 20%;
-  padding-top: 1%;  
+svg {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
 }
 
 #myPost:hover:not(.header){
   background-color:#eff1f8 !important;
 }
 
+/* FIN TWEET */
+/* ---------------------------------------------------------------------------------------------------------------------------- */
 
-.parametreHead{
+
+/* .parametreHead{
   position: absolute;
   left: 40%;
   top:10%;
@@ -118,9 +109,9 @@ border-top: 1px solid gray ;
 
 .parametreContent{
   justify-content: space-between !important;
-}
+} */
 
-#cardParametre1{
+/* #cardParametre1{
   margin-left: 120%;
   margin-top: 8%;
 }
@@ -132,67 +123,18 @@ border-top: 1px solid gray ;
 
 #cardParametre3{
   margin: auto;
-}
+} */
 
-.contentPWD{
+/* .contentPWD{
   font-family: FontAwesome;
   src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
   src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
-.interactionPoste{
+/* .interactionPoste{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-@media (max-width: 767px){
-  .trends-for-you {
-    display: none;
-  }
-}
-  
-@media (min-width: 768px) {
-
-.trends-for-you {
-    position: fixed;
-    top: 11.5%;
-    right: 1.125%;
-    width: 20%;
-    border-radius: 15px;
-    background: #ffffff;
-    margin-bottom: 15px;
-    height: fit-content;
-  }
-  
-  .trends-for-you__block {
-    border-bottom: 1px solid #e6ecf0;
-    padding: 10px 15px;
-  }
-  
-  .trends-for-you__block:last-child {
-    border-bottom: none;
-  }
-  
-  .trends-for-you__heading {
-    font-size: 19px;
-    font-weight: bold;
-    color: #14171a;
-  }
-  
-  .trends-for-you__meta-information {
-    font-size: 13px;
-    font-weight: 300;
-    color: #657786;
-  }
-  
-  .trends-for-you__trend-name {
-    font-size: 15px;
-    color: #14171a;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 2px;
-  }
-}
+} */
   
