@@ -36,7 +36,6 @@ final class Version20221021135548 extends AbstractMigration
         (26, 'API2@gmail.com', '[]', 'API2', 'API2', 'API2', 'Test api 2', 1, '2022-12-02 15:16:02', 1, ''),
         (27, 'API3@gmail.com', '[]', 'API3#', 'API3', 'API3', 'API3', 1, '2022-12-05 07:30:00', 1, '');");
         $this->addSql("INSERT INTO `message_public` (`id`, `texte_message`, `like_message`, `rt_message`, `image`, `date_crea_message`, `util_id`) VALUES
-        (108, 'J\'aime les chats.', 1, 1, NULL, '2022-10-15 18:38:40', 19),
         (110, 'Bonjour, je suis nouveau ! ', 0, 0, NULL, '2022-10-15 18:40:13', 18),
         (112, 'Je suis l\'administrateur de ce site ! ', 999, 999, NULL, '2022-10-15 21:37:54', 1),
         (113, 'Je ne sais pas quoi écrire. ', 2, 35, NULL, '2022-10-15 21:38:49', 20),

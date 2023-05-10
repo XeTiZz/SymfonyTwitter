@@ -31,6 +31,11 @@
       {% if next < messages|length %}
           <a href="{{ path('app_index', {offset: next }) }}">Suivant</a>
       {% endif %}
+
+      <a href="#" class="arrowUP">
+        <i class="ti-arrow-up"></i>
+      </a>
+
     </div>
   </div>
 

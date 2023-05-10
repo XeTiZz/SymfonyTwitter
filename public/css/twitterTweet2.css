@@ -21,6 +21,24 @@ body{
   position:relative;
 }
 
+.ti-arrow-up{
+  color: white;
+}
+
+.arrowUP{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #4b49ac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 /* DÉBUT TWEET */
 .noneUnderline {
